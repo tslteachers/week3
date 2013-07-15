@@ -7,6 +7,6 @@ Imdb::Application.routes.draw do
   #
   # Can you fix it by changing only this file?
 
-  get "movielist", :controller => 'movies', :action => 'list'
+  get "movies", :controller => 'movies', :action => 'index'
 
 end
