@@ -1,12 +1,15 @@
 Imdb::Application.routes.draw do
 
-  # FIXME: This route should allow the user to see our list of movies.
-  #
-  # We want to let the user see the list when they browse to:
-  # http://localhost:3000/movies
-  #
-  # Can you fix it by changing only this file?
+  # get "movies", :controller => 'movies', :action => 'index'
 
-  get "movies", :controller => 'movies', :action => 'index'
+  get "movies", controller: 'movies', action: 'index'
+
+  # get "movies" => "movies#index"
+
+  # CHALLENGE:
+
+  # http://localhost:3000/movies/show
+
+  get "/movies/show" => 'movies#show'
 
 end
