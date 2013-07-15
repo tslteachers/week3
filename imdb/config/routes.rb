@@ -12,4 +12,6 @@ Imdb::Application.routes.draw do
 
   get "/movies/show" => 'movies#show'
 
+  get "/movies/new" => 'movies#new'
+
 end
