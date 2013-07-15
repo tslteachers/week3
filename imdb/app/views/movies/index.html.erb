@@ -1,7 +1,13 @@
 <h1>Movies</h1>
 
 <ul>
+  <!-- CHALLENGE: -->
+  <!-- Turn each li element into a link to the show page -->
   <% @movies.each do |movie| %>
-    <li><%= movie %></li>
+    <li>
+      <%= link_to movie, "/movies/show?id=0"  %>
+
+      <!-- <a href="/movies/show"><%= movie %></a> -->
+    </li>
   <% end %>
 </ul>

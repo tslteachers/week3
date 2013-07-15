@@ -1,6 +1,12 @@
-<h1>Apollo 13</h1>
+<h1><%= @title %></h1>
 
-<p><a href="/movies">Home</a></p>
+<%= params["id"] %>
+
+<p>
+  <!-- Convert this link to a link_to method call instead -->
+  <!-- <a href="/movies">Home</a> -->
+  <%= link_to "Home", "/movies" %>
+</p>
 
 <img src="/assets/apollo_13.jpg" width="200">
 
