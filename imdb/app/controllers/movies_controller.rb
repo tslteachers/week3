@@ -8,8 +8,8 @@ class MoviesController < ApplicationController
 
   def show
     @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
-    movie_id = params["id"]
-    @title = @movies[movie_id.to_i]
+    movie_id = params["id"].to_i
+    @title = @movies[movie_id]
     render 'show'
   end
 
