@@ -1,20 +1,12 @@
 Imdb::Application.routes.draw do
+  # /movies/new
 
-  # get "movies", :controller => 'movies', :action => 'index'
-
-  get "movies", controller: 'movies', action: 'index'
-
-  # get "movies" => "movies#index"
-
-  # CHALLENGE:
-
-  # http://localhost:3000/movies/show
-
-       # /movies/2
-  get "/movies/:id" => 'movies#show'   # ?id=2
+  get "/movies" => "movies#index"
 
   get "/movies/new" => 'movies#new'
 
-  get "/movies/create" => 'movies#create'
+  get "/movies/:id" => 'movies#show'
+
+  post "/movies" => 'movies#create'
 
 end

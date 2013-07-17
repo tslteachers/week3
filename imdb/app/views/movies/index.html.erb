@@ -11,7 +11,7 @@
 <ul>
   <% @movies.each_with_index do |movie, index| %>
     <li>
-      <%= link_to movie, "/movies/show?id=#{index}"  %>
+      <%= link_to movie, "/movies/#{index}"  %>
     </li>
   <% end %>
 </ul>

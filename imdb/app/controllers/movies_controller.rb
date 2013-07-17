@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
 
   def show
     @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
+    @movies.sort!
     movie_id = params["id"].to_i
     @title = @movies[movie_id]
   end
