@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
 
   def new
+
   end
 
   def create
@@ -9,11 +10,13 @@ class MoviesController < ApplicationController
     @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
     @movies.push(new_movie_title)
 
-    render 'index'
+    redirect_to "/movies"
+    # render 'index'
   end
 
   def index
     @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
+    @movies.sort!
   end
 
   def show
