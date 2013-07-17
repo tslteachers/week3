@@ -15,8 +15,9 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
-    @movies.sort!
+    # @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
+    # @movies.sort!
+    @movies = Movie.all
   end
 
   def show

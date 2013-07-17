@@ -9,9 +9,9 @@
 <!-- WARM-UP CHALLENGE #2: -->
 <!-- Display the list of movies in alphabetical order. -->
 <ul>
-  <% @movies.each_with_index do |movie, index| %>
+  <% @movies.each do |movie| %>
     <li>
-      <%= link_to movie, "/movies/#{index}"  %>
+      <%= link_to movie.title, "/movies/#{movie.id}"  %>
     </li>
   <% end %>
 </ul>
