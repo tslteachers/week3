@@ -5,10 +5,15 @@ class MoviesController < ApplicationController
   end
 
   def create
-    new_movie_title = params[:title]
+    # CHALLENGE: Change this code so we add a new movie to the database.
+    new_movie = Movie.new
+    new_movie.title = params[:title]
+    new_movie.year = params[:year]
+    new_movie.save
+    # new_movie_title = params[:title]
 
-    @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
-    @movies.push(new_movie_title)
+    # @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
+    # @movies.push(new_movie_title)
 
     redirect_to "/movies"
     # render 'index'
