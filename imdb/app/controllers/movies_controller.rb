@@ -21,10 +21,16 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
-    @movies.sort!
-    movie_id = params["id"].to_i
-    @title = @movies[movie_id]
+    # Parameters: {"id"=>"2"}
+    @movie = Movie.find_by_id(params[:id])
+    if @movie == nil
+      redirect_to "http://localhost:3000/movies"
+    end
+
+    # @movies = ['Lincoln', 'Apollo 13', 'Star Wars', 'Raiders of the Lost Ark']
+    # @movies.sort!
+    # movie_id = params["id"].to_i
+    # @title = @movies[movie_id]
   end
 
 end
