@@ -14,10 +14,10 @@ list_of_movies = [
   { title: 'Raiders of the Lost Ark', year: 1981 }
 ]
 
-# Movie.destroy_all
-# list_of_movies.each do |movie_data|
-#   m = Movie.new
-#   m.title = movie_data[:title]
-#   m.year = movie_data[:year]
-#   m.save
-# end
+Movie.destroy_all
+list_of_movies.each do |movie_data|
+  m = Movie.new
+  m.title = movie_data[:title]
+  m.year = movie_data[:year]
+  m.save
+end
