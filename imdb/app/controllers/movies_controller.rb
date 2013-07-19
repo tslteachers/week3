@@ -4,6 +4,13 @@ class MoviesController < ApplicationController
     @movie = Movie.find_by_id(params[:id])
   end
 
+  def update
+    @movie = Movie.find_by_id(params[:id])
+    @movie.title = params[:title]
+    @movie.year = params[:year]
+    @movie.save
+    redirect_to "http://localhost:3000/movies"
+  end
   def new
 
   end

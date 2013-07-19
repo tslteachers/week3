@@ -1,7 +1,6 @@
 <h1>Edit Movie</h1>
 
 <%= form_tag "/movies/#{@movie.id}", :method => "patch" do %>
-  <input name="secret" value="123" type="hidden">
 
   <p><label>Title:</label><input value="<%= @movie.title %>" type="text" name="title" size="60"></p>
 
