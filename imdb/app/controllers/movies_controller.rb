@@ -1,5 +1,11 @@
 class MoviesController < ApplicationController
 
+  def destroy
+    @movie = Movie.find_by_id(params[:id])
+    @movie.destroy
+    redirect_to "http://localhost:3000/movies"
+  end
+
   def edit
     @movie = Movie.find_by_id(params[:id])
   end

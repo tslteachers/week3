@@ -1,6 +1,5 @@
 Imdb::Application.routes.draw do
 
-
   # Create
   get "/movies/new" => 'movies#new'
   post "/movies" => 'movies#create'
@@ -14,6 +13,6 @@ Imdb::Application.routes.draw do
   patch "/movies/:id" => 'movies#update'
 
   # Delete
-
+  delete "/movies/:id" => 'movies#destroy'
 
 end

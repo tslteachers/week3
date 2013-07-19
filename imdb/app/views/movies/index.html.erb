@@ -7,6 +7,8 @@
     <li>
       <%= link_to movie.title, "/movies/#{movie.id}"  %>
       <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
+      <%= link_to "Toast", "/movies/#{movie.id}",
+          :method => 'delete', :data => { confirm: 'Whoa! Really?' } %>
     </li>
   <% end %>
 </ul>
