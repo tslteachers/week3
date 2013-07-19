@@ -1,5 +1,9 @@
 class MoviesController < ApplicationController
 
+  def edit
+    @movie = Movie.find_by_id(params[:id])
+  end
+
   def new
 
   end

@@ -6,6 +6,7 @@
   <% @movies.each do |movie| %>
     <li>
       <%= link_to movie.title, "/movies/#{movie.id}"  %>
+      <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
     </li>
   <% end %>
 </ul>

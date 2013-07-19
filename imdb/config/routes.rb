@@ -1,12 +1,19 @@
 Imdb::Application.routes.draw do
-  # /movies/new
 
-  get "/movies" => "movies#index"
 
+  # Create
   get "/movies/new" => 'movies#new'
+  post "/movies" => 'movies#create'
 
+  # Read
+  get "/movies" => "movies#index"
   get "/movies/:id" => 'movies#show'
 
-  post "/movies" => 'movies#create'
+  # Update
+  get "/movies/:id/edit" => 'movies#edit'
+
+
+  # Delete
+
 
 end
