@@ -1,4 +1,4 @@
-Notes
+How to Get Started
 =====
 
 1. Clone this repository to your computer.
@@ -13,7 +13,8 @@ Now you can use as many Terminal tabs as you want to:
 
 When you want to stop the rails server, use Ctrl-C.  
 
-=== Using the Rails Console
+Using the Rails Console
+=====
 
 There's a full lesson on Lantern, but a quick reminder:
 
