@@ -11,7 +11,7 @@ Imdb::Application.routes.draw do
 
   # Update
   get "/movies/:id/edit" => 'movies#edit'
-
+  patch "/movies/:id" => 'movies#update'
 
   # Delete
 
